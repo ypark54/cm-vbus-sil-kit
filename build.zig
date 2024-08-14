@@ -85,6 +85,7 @@ fn addIncludePath_ThirdParty(b: *std.Build, c: *Compile) void {
     c.addIncludePath(b.path("ThirdParty/spdlog/include"));
     c.addIncludePath(b.path("ThirdParty/yaml-cpp/include"));
 }
+
 pub fn build(b: *std.Build) !void {
     const target: ResolvedTarget = b.resolveTargetQuery(.{ .cpu_arch = .x86_64, .os_tag = .windows, .abi = .gnu });
     const optimize: OptimizeMode = .ReleaseSafe;
